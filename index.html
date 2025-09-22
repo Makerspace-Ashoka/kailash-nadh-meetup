@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application | Exclusive Meetup with Kailash Nadh</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="desktop-layout">
+    <!-- Left Side: Streamlined Hero -->
+    <div class="hero-section">
+      <div class="hero-content">
+        <img src="call_for_open_source_contributors.png" alt="Open Call for Open Source Contributors"
+          class="event-poster">
+
+        <h1 class="event-title">
+          Exclusive Meetup with Kailash Nadh
+        </h1>
+
+        <p class="event-subtitle">
+          Pre-talk meetup for open source contributors
+        </p>
+
+        <div class="event-when-where">
+          Tomorrow, Sep 23rd at 5:30 PM<br>
+          Location shared with selected applicants<br><br>
+          <i>Facilitated by the Makerspace Team with help from the CS Society for marketing, comms, and logistics.</i>
+        </div>
+
+        <div class="countdown" id="countdown">
+          Time left: Calculating...
+        </div>
+
+        <p class="credibility-line">
+          CTO Zerodha • Founder FOSS United • Creator of <a target="_blank"
+            href="https://github.com/knadh/listmonk">listmonk</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Right Side: Form -->
+    <div class="form-section">
+      <div class="typeform-wrapper">
+        <div data-tf-live="01K5RDGBM199PW31DFJ6BQDXV3"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 Makerspace Ashoka • <a href="mailto:makerspace@ashoka.edu.in">Contact Us</a>
+      <br />
+      Generated and compiled w/
+      <3 by <a target="_blank" href="https://twitter.com/deeprajpandey">deepraj</a> & trusty ol' <a target="_blank"
+          href="https://claude.ai/">claude</a>
+    </p>
+  </footer>
+
+  <script src="//embed.typeform.com/next/embed.js"></script>
+  <script>
+    function updateCountdown() {
+      const deadline = new Date("2025-09-23T12:00:00+05:30").getTime();
+      const now = new Date().getTime();
+      const timeLeft = deadline - now;
+
+      if (timeLeft <= 0) {
+        document.getElementById("countdown").innerText = "Applications closed!";
+        return;
+      }
+
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText = `${hours}h ${minutes}m ${seconds}s left`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+
+</html>
